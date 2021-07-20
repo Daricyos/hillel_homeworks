@@ -20,12 +20,12 @@ class User(db.Model):
     def repr(self):
         return f'<Id {self.id} Transaction_date {self.Transaction_date}, Product {self.Product}, Price {self.Price}, Payment_Type {self.Payment_Type}>'
 
-db.create_all()
 
 #adding data in database
 
 @app.route("/create")
 def index():
+    db.create_all()
     with open("homework3sales.csv", encoding='utf-8') as r_file:
         file_reader = csv.DictReader(r_file, delimiter = ";")
         allofthem = []
