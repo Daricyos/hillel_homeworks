@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+        background: #90ee90;
+        color: #3952e0;
+        }
+    </style>
+    <body>
+        <table>
+            <tr>
+                <th>Дата и Время</th>
+                <th>Продукт</th>
+                <th>Прайс</th>
+                <th>Карта</th>
+            </tr>
+            {% for item in items %}
+            <tr>
+                <td>{{ item.Transaction_date }}</td>
+                <td>{{ item.Product }}</td>
+                <td>{{ item.Price }}</td>
+                <td>{{ item.Payment_Type }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
